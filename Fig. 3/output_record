@@ -1,0 +1,986 @@
+D:\Anaconda\envs\multiplan\python.exe D:/PyCharm/ProbabilityPlan/ChancePlanCord/ChancePlanCord-10-order.py
+path_bat: D:\PyCharm\ProbabilityPlan\Cplexdata\83NodeChkModCord\data83infrochkmodcord_trdG_kmax30_mcs_yp
+
+                  Ptr_evel      Pevel  Sevcs  Ptr_dgen      Pdgen  Sdgen
+CasePent_Stage_0      0.05   1.647405   12.0      0.15   4.942214  31.35
+CasePent_Stage_1      0.15   5.950541   12.0      0.30  11.901082  31.35
+CasePent_Stage_2      0.20   8.859945   12.0      0.50  22.149862  31.35
+CasePent_Stage_3      0.24  11.474109   12.0      0.65  31.075711  31.35
+
+the state of IndpDirectLRA:  True
+Part 1: read case data...
+             Node  Line  Ties  Slck
+CaseNetwork    94    83     6    11
+
+            2_port  3_port  4_port  total
+CaseScheme      64     200     406    670
+
+          Load  Evel  Wind  Sola  total
+CaseRand    66     6     0    11     83
+
+                  Ptr_evel      Pevel  Sevcs  Ptr_dgen      Pdgen  Sdgen
+CasePent_Stage_0      0.05   1.647405   12.0      0.15   4.942214  31.35
+CasePent_Stage_1      0.15   5.950541   12.0      0.30  11.901082  31.35
+CasePent_Stage_2      0.20   8.859945   12.0      0.50  22.149862  31.35
+CasePent_Stage_3      0.24  11.474109   12.0      0.65  31.075711  31.35
+
+distribution of Load: mean=0.63, sigma=0.10, medin=0.75
+distribution of Evel: mean=0.20, sigma=0.22, medin=0.53
+distribution of Wind: mean=8.08, sigma=4.52, medin=14.38
+distribution of Sola: mean=0.32, sigma=0.26, medin=0.73
+Part 2: solve chance-constrained model with evolution...
+            BaselitSg CirclesSg PenaltySg     VoltopmSg
+selectInfro      yres     order   penalty  simultaneous
+
+kiter:  0
+Planning model: Define parameters
+Time= 0.0
+Planning model: Define varaibles
+Time= 0.022968053817749023
+Planning model: Define objectices
+Time= 0.007977724075317383
+Planning model: Construct constraint matrices
+Time= 0.1266319751739502
+Planning model: Write constraints
+Planning model: Write constraints-variable
+Planning model: Write constraints-linear
+Planning model: Write constraints-cone
+Time= 171.75273370742798
+Planning model: Solve problem
+Set parameter Username
+Academic license - for non-commercial use only - expires 2024-03-01
+Solver=  gurobi
+Status=  optimal
+Time= 1218.1152637004852
+Planning model: Extract results
+Imaxlit_sec: 4.560000
+Df_Ungap:
+         Unodemax  Unodemin  Ildrtmax  Gapxymax      Gaplsmax      Gappsmax
+stage1  1.000000  0.964646  0.689132  0.000362  2.983060e-21  9.822770e-25
+stage2  1.000000  0.960660  0.744250  0.000362  2.983060e-21  9.822770e-25
+stage3  1.000000  0.957038  0.859785  0.000362  2.983060e-21  9.822770e-25
+stage4  1.033811  0.953146  0.939039  0.000362  2.983060e-21  9.822770e-25
+
+Df_Schme_select:
+ Empty DataFrame
+Columns: []
+Index: [stage1, stage2, stage3, stage4]
+
+Df_Ssopt_select:
+           7   12   13   20   29   39   53   60   64   72   76   83  sum
+stage1  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0
+stage2  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0
+stage3  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0
+stage4  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0
+
+Df_Pevel:
+          28    49    68    72   82    83    sum   ptr
+stage1  0.0  1.65  0.00  0.00  0.0  0.00   1.65  0.05
+stage2  2.0  2.00  1.95  0.00  0.0  0.00   5.95  0.15
+stage3  2.0  2.00  2.00  0.86  2.0  0.00   8.86  0.20
+stage4  2.0  2.00  2.00  2.00  2.0  1.47  11.47  0.24
+
+Df_Sevcs:
+          28    49    68    72   82    83    sum
+stage1  0.0  1.65  0.00  0.00  0.0  0.00   1.65
+stage2  2.0  2.00  1.96  0.00  0.0  0.00   5.96
+stage3  2.0  2.00  2.00  0.86  2.0  0.00   8.86
+stage4  2.0  2.00  2.00  2.00  2.0  1.48  11.48
+
+Df_Pdgen:
+           10    11    24    29    39    40    55    60    63    64    76    sum   ptr
+stage1  2.72  0.00  0.42  0.00  0.74  0.03  0.74  0.00  0.00  0.29  0.00   4.94  0.15
+stage2  2.85  0.00  1.54  1.82  1.72  0.03  2.41  0.14  0.67  0.52  0.21  11.90  0.30
+stage3  2.85  2.85  2.64  2.85  2.66  0.04  2.85  1.44  0.69  0.55  2.73  22.15  0.50
+stage4  2.85  2.85  2.85  2.85  2.85  2.85  2.85  2.85  2.85  2.58  2.85  31.08  0.65
+
+Df_Sdgen:
+           10   11    24    29    39    40    55    60    63    64    76    sum
+stage1  2.87  0.0  0.45  0.00  0.79  0.04  0.79  0.00  0.00  0.31  0.00   5.25
+stage2  3.00  0.0  1.63  1.92  1.81  0.04  2.54  0.15  0.71  0.55  0.23  12.58
+stage3  3.00  3.0  2.78  3.00  2.81  0.04  3.00  1.52  0.73  0.58  2.88  23.34
+stage4  3.00  3.0  3.00  3.00  3.00  3.00  3.00  3.00  3.00  2.72  3.00  32.72
+
+Df_Cost:
+         sit  sop  ref      sev     evs     dgc     sls     rsum
+stage1  0.0  0.0  0.0   300.00  132.00  420.00  217.89  1069.89
+stage2  0.0  0.0  0.0   434.64  160.57  273.08  117.42   985.71
+stage3  0.0  0.0  0.0   308.43   44.72  165.94   66.75   585.84
+stage4  0.0  0.0  0.0   119.70   12.54   44.91   51.67   228.82
+csum    0.0  0.0  0.0  1162.77  349.83  903.93  453.73  2870.26
+
+Time= 0.2218465805053711
+simulate by MCS method
+simulate by MCS method
+simulate by MCS method
+simulate by MCS method
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=0 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=1 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=2 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=3 m=0
+p=0 m=10000
+p=1 m=10000
+p=2 m=10000
+p=3 m=10000
+p=1 m=19999
+p=0 m=19999
+p=2 m=19999
+p=3 m=19999
+***time_propagation_single: 2335.840297937393
+stage 0: maximum violate of volt_min [0.03675] at index [9]
+stage 0: maximum violate of volt_max [0.] at index [0]
+stage 0: maximum violate of line_max [0.0012] at index [76]
+
+stage 1: maximum violate of volt_min [0.09515] at index [9]
+stage 1: maximum violate of volt_max [0.] at index [0]
+stage 1: maximum violate of line_max [0.0125] at index [76]
+
+stage 2: maximum violate of volt_min [0.1667] at index [93]
+stage 2: maximum violate of volt_max [0.] at index [0]
+stage 2: maximum violate of line_max [0.18015] at index [76]
+
+stage 3: maximum violate of volt_min [0.3298] at index [93]
+stage 3: maximum violate of volt_max [0.3223] at index [71]
+stage 3: maximum violate of line_max [0.3303] at index [76]
+
+kiter:  1
+Planning model: Define parameters
+Time= 0.0009853839874267578
+Planning model: Define varaibles
+Time= 0.024933576583862305
+Planning model: Define objectices
+Time= 0.008975982666015625
+Planning model: Construct constraint matrices
+Time= 0.12539386749267578
+Planning model: Write constraints
+Planning model: Write constraints-variable
+Planning model: Write constraints-linear
+Planning model: Write constraints-cone
+Time= 228.59871578216553
+Planning model: Solve problem
+Solver=  gurobi
+Status=  optimal
+Time= 2146.5931861400604
+Planning model: Extract results
+Imaxlit_sec: 4.560000
+Df_Ungap:
+         Unodemax  Unodemin  Ildrtmax  Gapxymax      Gaplsmax  Gappsmax
+stage1  1.000000  0.964646  0.689132  0.000362  3.012589e-10       0.0
+stage2  1.000000  0.961354  0.744250  0.000362  3.012589e-10       0.0
+stage3  1.000000  0.963251  0.710142  0.000362  3.012589e-10       0.0
+stage4  1.000959  0.968601  0.607776  0.000362  3.012589e-10       0.0
+
+Df_Schme_select:
+                   0                1
+stage1         None             None
+stage2      (7, 72)             None
+stage3  (7, 72, 83)             None
+stage4     (29, 39)  (7, 64, 72, 83)
+
+Df_Ssopt_select:
+            7   12   13   20    29    39   53   60    64    72   76    83   sum
+stage1  0.00  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.00  0.0  0.00  0.00
+stage2  0.16  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.04  0.0  0.00  0.20
+stage3  0.53  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.37  0.0  0.54  1.44
+stage4  0.53  0.0  0.0  0.0  0.96  0.97  0.0  0.0  2.91  1.14  0.0  1.46  7.97
+
+Df_Pevel:
+          28    49    68   72    82   83    sum   ptr
+stage1  0.0  1.65  0.00  0.0  0.00  0.0   1.65  0.05
+stage2  2.0  2.00  1.95  0.0  0.00  0.0   5.95  0.15
+stage3  2.0  2.00  2.00  2.0  0.86  0.0   8.86  0.20
+stage4  2.0  2.00  2.00  2.0  1.47  2.0  11.47  0.24
+
+Df_Sevcs:
+          28    49    68   72    82   83    sum
+stage1  0.0  1.65  0.00  0.0  0.00  0.0   1.65
+stage2  2.0  2.00  1.96  0.0  0.00  0.0   5.96
+stage3  2.0  2.00  2.00  2.0  0.86  0.0   8.86
+stage4  2.0  2.00  2.00  2.0  1.48  2.0  11.48
+
+Df_Pdgen:
+           10    11    24    29    39    40    55    60    63    64    76    sum   ptr
+stage1  2.72  0.00  0.42  0.00  0.74  0.03  0.74  0.00  0.00  0.29  0.00   4.94  0.15
+stage2  2.85  0.00  1.54  1.82  1.72  0.03  2.41  0.14  0.66  0.52  0.21  11.90  0.30
+stage3  2.85  2.85  2.64  2.85  2.66  0.04  2.85  1.44  0.70  0.55  2.73  22.15  0.50
+stage4  2.85  2.85  2.85  2.85  2.85  2.58  2.85  2.85  2.85  2.85  2.85  31.08  0.65
+
+Df_Sdgen:
+           10   11    24    29    39    40    55    60    63    64    76    sum
+stage1  2.86  0.0  0.45  0.00  0.79  0.04  0.79  0.00  0.00  0.31  0.00   5.24
+stage2  3.00  0.0  1.63  1.92  1.81  0.04  2.54  0.15  0.70  0.55  0.23  12.57
+stage3  3.00  3.0  2.78  3.00  2.81  0.05  3.00  1.52  0.74  0.58  2.88  23.36
+stage4  3.00  3.0  3.00  3.00  3.00  2.72  3.00  3.00  3.00  3.00  3.00  32.72
+
+Df_Cost:
+            sit    sop    ref      sev     evs     dgc     sls     rsum
+stage1    0.00   0.00   0.00   300.00  132.00  419.20  217.89  1069.09
+stage2  217.32   7.08  14.90   434.64  160.57  273.08  117.44  1225.03
+stage3    0.00  19.12  34.91   308.43   44.72  166.40   68.09   641.67
+stage4  119.70  31.26  22.98   119.70   12.54   44.81   49.90   400.89
+csum    337.02  57.46  72.79  1162.77  349.83  903.49  453.32  3336.68
+
+Time= 0.17889761924743652
+simulate by MCS method
+simulate by MCS method
+simulate by MCS method
+simulate by MCS method
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=0 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=1 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=2 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=3 m=0
+p=0 m=10000
+p=1 m=10000
+p=2 m=10000
+p=3 m=10000
+p=0 m=19999
+p=1 m=19999
+p=2 m=19999
+p=3 m=19999
+***time_propagation_single: 2992.7601265907288
+stage 0: maximum violate of volt_min [0.03675] at index [9]
+stage 0: maximum violate of volt_max [0.] at index [0]
+stage 0: maximum violate of line_max [0.0012] at index [76]
+
+stage 1: maximum violate of volt_min [0.04895] at index [80]
+stage 1: maximum violate of volt_max [0.] at index [0]
+stage 1: maximum violate of line_max [0.0125] at index [76]
+
+stage 2: maximum violate of volt_min [0.0785] at index [80]
+stage 2: maximum violate of volt_max [0.] at index [0]
+stage 2: maximum violate of line_max [0.07635] at index [64]
+
+stage 3: maximum violate of volt_min [0.01935] at index [80]
+stage 3: maximum violate of volt_max [0.09485] at index [70]
+stage 3: maximum violate of line_max [0.11065] at index [58]
+
+kiter:  2
+Planning model: Define parameters
+Time= 0.0
+Planning model: Define varaibles
+Time= 0.03393745422363281
+Planning model: Define objectices
+Time= 0.012965202331542969
+Planning model: Construct constraint matrices
+Time= 0.14066195487976074
+Planning model: Write constraints
+Planning model: Write constraints-variable
+Planning model: Write constraints-linear
+Planning model: Write constraints-cone
+Time= 285.58163499832153
+Planning model: Solve problem
+Solver=  gurobi
+Status=  optimal
+Time= 3202.656821489334
+Planning model: Extract results
+Imaxlit_sec: 4.560000
+Df_Ungap:
+         Unodemax  Unodemin  Ildrtmax  Gapxymax      Gaplsmax      Gappsmax
+stage1  1.000000  0.964646  0.689132  0.000362  1.437181e-10  1.312236e-11
+stage2  1.000000  0.961354  0.744250  0.000362  1.437181e-10  1.312236e-11
+stage3  1.000000  0.968545  0.710142  0.000362  1.437181e-10  1.312236e-11
+stage4  1.000959  0.969632  0.590330  0.000362  1.437181e-10  1.312236e-11
+
+Df_Schme_select:
+                   0                1
+stage1         None             None
+stage2      (7, 72)             None
+stage3  (7, 72, 83)             None
+stage4     (29, 39)  (7, 64, 72, 83)
+
+Df_Ssopt_select:
+            7   12   13   20    29    39   53   60    64    72   76    83   sum
+stage1  0.00  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.00  0.0  0.00  0.00
+stage2  0.16  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.04  0.0  0.00  0.20
+stage3  0.73  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.60  0.0  0.67  2.00
+stage4  0.73  0.0  0.0  0.0  0.96  0.97  0.0  0.0  3.29  1.24  0.0  1.58  8.77
+
+Df_Pevel:
+          28    49    68    72    82   83    sum   ptr
+stage1  0.0  1.65  0.00  0.00  0.00  0.0   1.65  0.05
+stage2  2.0  2.00  1.95  0.00  0.00  0.0   5.95  0.15
+stage3  2.0  2.00  2.00  1.39  1.47  0.0   8.86  0.20
+stage4  2.0  2.00  2.00  2.00  1.47  2.0  11.47  0.24
+
+Df_Sevcs:
+          28    49    68    72    82   83    sum
+stage1  0.0  1.65  0.00  0.00  0.00  0.0   1.65
+stage2  2.0  2.00  1.96  0.00  0.00  0.0   5.96
+stage3  2.0  2.00  2.00  1.39  1.48  0.0   8.87
+stage4  2.0  2.00  2.00  2.00  1.48  2.0  11.48
+
+Df_Pdgen:
+           10    11    24    29    39    40    55    60    63    64    76    sum   ptr
+stage1  2.72  0.00  0.42  0.00  0.74  0.03  0.74  0.00  0.00  0.29  0.00   4.94  0.15
+stage2  2.85  0.00  1.54  1.82  1.72  0.03  2.41  0.14  0.66  0.52  0.21  11.90  0.30
+stage3  2.85  2.85  2.64  2.85  2.67  0.04  2.85  1.44  0.70  0.55  2.73  22.15  0.50
+stage4  2.85  2.85  2.85  2.85  2.85  2.58  2.85  2.85  2.85  2.85  2.85  31.08  0.65
+
+Df_Sdgen:
+           10   11    24    29    39    40    55    60    63    64    76    sum
+stage1  2.87  0.0  0.45  0.00  0.79  0.04  0.79  0.00  0.00  0.31  0.00   5.25
+stage2  3.00  0.0  1.63  1.92  1.81  0.04  2.54  0.15  0.70  0.55  0.23  12.57
+stage3  3.00  3.0  2.78  3.00  2.81  0.04  3.00  1.52  0.74  0.58  2.88  23.35
+stage4  3.00  3.0  3.00  3.00  3.00  2.72  3.00  3.00  3.00  3.00  3.00  32.72
+
+Df_Cost:
+            sit    sop    ref      sev     evs     dgc     sls     rsum
+stage1    0.00   0.00   0.00   300.00  132.00  420.00  217.89  1069.89
+stage2  217.32   7.08  14.90   434.64  160.57  272.71  117.44  1224.66
+stage3    0.00  27.60  34.91   308.43   44.88  166.25   69.40   651.47
+stage4  119.70  32.41  22.98   119.70   12.50   44.86   51.84   403.99
+csum    337.02  67.09  72.79  1162.77  349.95  903.82  456.57  3350.01
+
+Time= 0.18677139282226562
+simulate by MCS method
+simulate by MCS method
+simulate by MCS method
+simulate by MCS method
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=0 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=1 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=2 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=3 m=0
+p=0 m=10000
+p=1 m=10000
+p=2 m=10000
+p=3 m=10000
+p=0 m=19999
+p=1 m=19999
+p=2 m=19999
+p=3 m=19999
+***time_propagation_single: 2578.664267539978
+stage 0: maximum violate of volt_min [0.03675] at index [9]
+stage 0: maximum violate of volt_max [0.] at index [0]
+stage 0: maximum violate of line_max [0.0012] at index [76]
+
+stage 1: maximum violate of volt_min [0.04895] at index [80]
+stage 1: maximum violate of volt_max [0.] at index [0]
+stage 1: maximum violate of line_max [0.0125] at index [76]
+
+stage 2: maximum violate of volt_min [0.01895] at index [79]
+stage 2: maximum violate of volt_max [0.] at index [0]
+stage 2: maximum violate of line_max [0.0599] at index [76]
+
+stage 3: maximum violate of volt_min [0.0143] at index [79]
+stage 3: maximum violate of volt_max [0.0293] at index [44]
+stage 3: maximum violate of line_max [0.0658] at index [58]
+
+kiter:  3
+Planning model: Define parameters
+Time= 0.0009968280792236328
+Planning model: Define varaibles
+Time= 0.03390908241271973
+Planning model: Define objectices
+Time= 0.012968063354492188
+Planning model: Construct constraint matrices
+Time= 0.13594388961791992
+Planning model: Write constraints
+Planning model: Write constraints-variable
+Planning model: Write constraints-linear
+Planning model: Write constraints-cone
+Time= 276.7432141304016
+Planning model: Solve problem
+Solver=  gurobi
+Status=  optimal
+Time= 2575.9366199970245
+Planning model: Extract results
+Imaxlit_sec: 4.560000
+Df_Ungap:
+         Unodemax  Unodemin  Ildrtmax  Gapxymax  Gaplsmax      Gappsmax
+stage1  1.000000  0.964646  0.689132  0.000362       0.0  2.451372e-13
+stage2  1.000000  0.961354  0.744250  0.000362       0.0  2.451372e-13
+stage3  1.000000  0.968686  0.696678  0.000362       0.0  2.451372e-13
+stage4  1.000953  0.969218  0.590330  0.000362       0.0  2.451372e-13
+
+Df_Schme_select:
+                   0                1
+stage1         None             None
+stage2      (7, 72)             None
+stage3  (7, 72, 83)             None
+stage4     (29, 39)  (7, 64, 72, 83)
+
+Df_Ssopt_select:
+            7   12   13   20    29    39   53   60    64    72   76    83   sum
+stage1  0.00  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.00  0.0  0.00  0.00
+stage2  0.15  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.04  0.0  0.00  0.19
+stage3  0.76  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.60  0.0  0.73  2.09
+stage4  0.76  0.0  0.0  0.0  0.96  0.97  0.0  0.0  3.34  1.20  0.0  1.65  8.88
+
+Df_Pevel:
+          28    49    68   72    82   83    sum   ptr
+stage1  0.0  1.65  0.00  0.0  0.00  0.0   1.65  0.05
+stage2  2.0  2.00  1.95  0.0  0.00  0.0   5.95  0.15
+stage3  2.0  2.00  2.00  1.4  1.46  0.0   8.86  0.20
+stage4  2.0  2.00  2.00  2.0  1.47  2.0  11.47  0.24
+
+Df_Sevcs:
+          28    49    68    72    82   83    sum
+stage1  0.0  1.65  0.00  0.00  0.00  0.0   1.65
+stage2  2.0  2.00  1.96  0.00  0.00  0.0   5.96
+stage3  2.0  2.00  2.00  1.41  1.46  0.0   8.87
+stage4  2.0  2.00  2.00  2.00  1.48  2.0  11.48
+
+Df_Pdgen:
+           10    11    24    29    39    40    55    60    63    64    76    sum   ptr
+stage1  2.72  0.00  0.42  0.00  0.74  0.03  0.74  0.00  0.00  0.29  0.00   4.94  0.15
+stage2  2.85  0.00  1.54  1.82  1.72  0.03  2.41  0.14  0.66  0.52  0.21  11.90  0.30
+stage3  2.85  2.85  2.64  2.85  2.67  0.03  2.85  1.44  0.70  0.55  2.73  22.15  0.50
+stage4  2.85  2.85  2.85  2.85  2.85  2.58  2.85  2.85  2.85  2.85  2.85  31.08  0.65
+
+Df_Sdgen:
+           10   11    24    29    39    40    55    60    63    64    76    sum
+stage1  2.87  0.0  0.45  0.00  0.79  0.04  0.79  0.00  0.00  0.31  0.00   5.25
+stage2  3.00  0.0  1.63  1.92  1.81  0.04  2.54  0.15  0.70  0.55  0.23  12.57
+stage3  3.00  3.0  2.78  3.00  2.81  0.04  3.00  1.52  0.74  0.58  2.88  23.35
+stage4  3.00  3.0  3.00  3.00  3.00  2.72  3.00  3.00  3.00  3.00  3.00  32.72
+
+Df_Cost:
+            sit    sop    ref      sev     evs     dgc     sls     rsum
+stage1    0.00   0.00   0.00   300.00  132.00  420.00  217.89  1069.89
+stage2  217.32   7.08  14.90   434.64  160.57  272.71  117.44  1224.66
+stage3    0.00  29.15  34.91   308.43   44.88  166.25   69.84   653.46
+stage4  119.70  32.46  22.98   119.70   12.50   44.86   52.21   404.41
+csum    337.02  68.69  72.79  1162.77  349.95  903.82  457.38  3352.42
+
+Time= 0.1721806526184082
+simulate by MCS method
+simulate by MCS method
+simulate by MCS method
+simulate by MCS method
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=0 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=1 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=2 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=3 m=0
+p=0 m=10000
+p=1 m=10000
+p=2 m=10000
+p=3 m=10000
+p=0 m=19999
+p=1 m=19999
+p=2 m=19999
+p=3 m=19999
+***time_propagation_single: 2576.5307054519653
+stage 0: maximum violate of volt_min [0.03675] at index [9]
+stage 0: maximum violate of volt_max [0.] at index [0]
+stage 0: maximum violate of line_max [0.0012] at index [76]
+
+stage 1: maximum violate of volt_min [0.04895] at index [80]
+stage 1: maximum violate of volt_max [0.] at index [0]
+stage 1: maximum violate of line_max [0.0125] at index [76]
+
+stage 2: maximum violate of volt_min [0.01955] at index [80]
+stage 2: maximum violate of volt_max [0.] at index [0]
+stage 2: maximum violate of line_max [0.05745] at index [76]
+
+stage 3: maximum violate of volt_min [0.016] at index [79]
+stage 3: maximum violate of volt_max [0.0293] at index [44]
+stage 3: maximum violate of line_max [0.05285] at index [76]
+
+kiter:  4
+Planning model: Define parameters
+Time= 0.0
+Planning model: Define varaibles
+Time= 0.03214621543884277
+Planning model: Define objectices
+Time= 0.010970354080200195
+Planning model: Construct constraint matrices
+Time= 0.12760591506958008
+Planning model: Write constraints
+Planning model: Write constraints-variable
+Planning model: Write constraints-linear
+Planning model: Write constraints-cone
+Time= 282.0555760860443
+Planning model: Solve problem
+Solver=  gurobi
+Status=  optimal
+Time= 3405.385013103485
+Planning model: Extract results
+Imaxlit_sec: 4.560000
+Df_Ungap:
+         Unodemax  Unodemin  Ildrtmax  Gapxymax  Gaplsmax      Gappsmax
+stage1  1.000000  0.964646  0.689132  0.000362       0.0  2.775558e-16
+stage2  1.000000  0.961354  0.744250  0.000362       0.0  2.775558e-16
+stage3  1.000000  0.969012  0.683252  0.000362       0.0  2.775558e-16
+stage4  1.000969  0.968428  0.590330  0.000362       0.0  2.775558e-16
+
+Df_Schme_select:
+                   0                1
+stage1         None             None
+stage2      (7, 72)             None
+stage3  (7, 72, 83)             None
+stage4     (29, 39)  (7, 64, 72, 83)
+
+Df_Ssopt_select:
+            7   12   13   20    29    39   53   60    64    72   76    83   sum
+stage1  0.00  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.00  0.0  0.00  0.00
+stage2  0.15  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.04  0.0  0.00  0.19
+stage3  0.79  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.63  0.0  0.77  2.19
+stage4  0.79  0.0  0.0  0.0  0.96  0.97  0.0  0.0  3.34  1.12  0.0  1.71  8.89
+
+Df_Pevel:
+          28    49    68    72    82   83    sum   ptr
+stage1  0.0  1.65  0.00  0.00  0.00  0.0   1.65  0.05
+stage2  2.0  2.00  1.95  0.00  0.00  0.0   5.95  0.15
+stage3  2.0  2.00  2.00  1.53  1.33  0.0   8.86  0.20
+stage4  2.0  2.00  2.00  2.00  1.47  2.0  11.47  0.24
+
+Df_Sevcs:
+          28    49    68    72    82   83    sum
+stage1  0.0  1.65  0.00  0.00  0.00  0.0   1.65
+stage2  2.0  2.00  1.96  0.00  0.00  0.0   5.96
+stage3  2.0  2.00  2.00  1.54  1.33  0.0   8.87
+stage4  2.0  2.00  2.00  2.00  1.48  2.0  11.48
+
+Df_Pdgen:
+           10    11    24    29    39    40    55    60    63    64    76    sum   ptr
+stage1  2.72  0.00  0.42  0.00  0.74  0.03  0.74  0.00  0.00  0.29  0.00   4.94  0.15
+stage2  2.85  0.00  1.54  1.82  1.72  0.03  2.41  0.14  0.66  0.52  0.21  11.90  0.30
+stage3  2.85  2.85  2.64  2.85  2.67  0.03  2.85  1.44  0.70  0.55  2.73  22.15  0.50
+stage4  2.85  2.85  2.85  2.85  2.85  2.58  2.85  2.85  2.85  2.85  2.85  31.08  0.65
+
+Df_Sdgen:
+           10   11    24    29    39    40    55    60    63    64    76    sum
+stage1  2.87  0.0  0.45  0.00  0.79  0.04  0.79  0.00  0.00  0.31  0.00   5.25
+stage2  3.00  0.0  1.63  1.92  1.81  0.04  2.54  0.15  0.70  0.55  0.23  12.57
+stage3  3.00  3.0  2.78  3.00  2.81  0.04  3.00  1.52  0.74  0.58  2.88  23.35
+stage4  3.00  3.0  3.00  3.00  3.00  2.72  3.00  3.00  3.00  3.00  3.00  32.72
+
+Df_Cost:
+            sit    sop    ref      sev     evs     dgc     sls     rsum
+stage1    0.00   0.00   0.00   300.00  132.00  420.00  217.89  1069.89
+stage2  217.32   7.08  14.90   434.64  160.57  272.71  117.44  1224.66
+stage3    0.00  30.84  34.91   308.43   44.88  166.25   70.30   655.61
+stage4  119.70  32.03  22.98   119.70   12.50   44.86   52.32   404.09
+csum    337.02  69.95  72.79  1162.77  349.95  903.82  457.95  3354.25
+
+Time= 0.24676513671875
+simulate by MCS method
+simulate by MCS method
+simulate by MCS method
+simulate by MCS method
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=0 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=1 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=2 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=3 m=0
+p=0 m=10000
+p=1 m=10000
+p=2 m=10000
+p=3 m=10000
+p=0 m=19999
+p=1 m=19999
+p=2 m=19999
+p=3 m=19999
+***time_propagation_single: 2797.68812251091
+stage 0: maximum violate of volt_min [0.03675] at index [9]
+stage 0: maximum violate of volt_max [0.] at index [0]
+stage 0: maximum violate of line_max [0.0012] at index [76]
+
+stage 1: maximum violate of volt_min [0.04895] at index [80]
+stage 1: maximum violate of volt_max [0.] at index [0]
+stage 1: maximum violate of line_max [0.0125] at index [76]
+
+stage 2: maximum violate of volt_min [0.01995] at index [80]
+stage 2: maximum violate of volt_max [0.] at index [0]
+stage 2: maximum violate of line_max [0.0502] at index [76]
+
+stage 3: maximum violate of volt_min [0.0201] at index [79]
+stage 3: maximum violate of volt_max [0.0293] at index [44]
+stage 3: maximum violate of line_max [0.05005] at index [76]
+
+kiter:  5
+Planning model: Define parameters
+Time= 0.0
+Planning model: Define varaibles
+Time= 0.038915157318115234
+Planning model: Define objectices
+Time= 0.018527746200561523
+Planning model: Construct constraint matrices
+Time= 0.1392362117767334
+Planning model: Write constraints
+Planning model: Write constraints-variable
+Planning model: Write constraints-linear
+Planning model: Write constraints-cone
+Time= 349.38194704055786
+Planning model: Solve problem
+Solver=  gurobi
+Status=  optimal
+Time= 3829.8233258724213
+Planning model: Extract results
+Imaxlit_sec: 4.560000
+Df_Ungap:
+         Unodemax  Unodemin  Ildrtmax  Gapxymax      Gaplsmax      Gappsmax
+stage1  1.000000  0.964646  0.689132  0.000362  3.136879e-10  1.200424e-08
+stage2  1.000000  0.961354  0.744250  0.000362  3.136879e-10  1.200424e-08
+stage3  1.000000  0.969199  0.677346  0.000362  3.136879e-10  1.200424e-08
+stage4  1.000959  0.967794  0.590330  0.000362  3.136879e-10  1.200424e-08
+
+Df_Schme_select:
+                   0                1
+stage1         None             None
+stage2      (7, 72)             None
+stage3  (7, 72, 83)             None
+stage4     (29, 39)  (7, 64, 72, 83)
+
+Df_Ssopt_select:
+            7   12   13   20    29    39   53   60    64    72   76    83   sum
+stage1  0.00  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.00  0.0  0.00  0.00
+stage2  0.16  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.04  0.0  0.00  0.20
+stage3  0.81  0.0  0.0  0.0  0.00  0.00  0.0  0.0  0.00  0.64  0.0  0.79  2.24
+stage4  0.81  0.0  0.0  0.0  0.96  0.97  0.0  0.0  3.34  1.06  0.0  1.76  8.90
+
+Df_Pevel:
+          28    49    68    72    82    83    sum   ptr
+stage1  0.0  1.65  0.00  0.00  0.00  0.00   1.65  0.05
+stage2  2.0  2.00  1.95  0.00  0.00  0.00   5.95  0.15
+stage3  2.0  2.00  2.00  1.59  0.00  1.27   8.86  0.20
+stage4  2.0  2.00  2.00  2.00  1.47  2.00  11.47  0.24
+
+Df_Sevcs:
+          28    49    68   72    82    83    sum
+stage1  0.0  1.65  0.00  0.0  0.00  0.00   1.65
+stage2  2.0  2.00  1.96  0.0  0.00  0.00   5.96
+stage3  2.0  2.00  2.00  1.6  0.00  1.27   8.87
+stage4  2.0  2.00  2.00  2.0  1.48  2.00  11.48
+
+Df_Pdgen:
+           10    11    24    29    39    40    55    60    63    64    76    sum   ptr
+stage1  2.72  0.00  0.42  0.00  0.74  0.03  0.74  0.00  0.00  0.29  0.00   4.94  0.15
+stage2  2.85  0.00  1.54  1.82  1.72  0.03  2.41  0.14  0.66  0.52  0.21  11.90  0.30
+stage3  2.85  2.85  2.64  2.85  2.67  0.03  2.85  1.44  0.70  0.55  2.73  22.15  0.50
+stage4  2.85  2.85  2.85  2.85  2.85  2.58  2.85  2.85  2.85  2.85  2.85  31.08  0.65
+
+Df_Sdgen:
+           10   11    24    29    39    40    55    60    63    64    76    sum
+stage1  2.87  0.0  0.45  0.00  0.79  0.04  0.79  0.00  0.00  0.31  0.00   5.25
+stage2  3.00  0.0  1.63  1.92  1.81  0.04  2.54  0.15  0.70  0.55  0.23  12.57
+stage3  3.00  3.0  2.78  3.00  2.81  0.04  3.00  1.52  0.74  0.58  2.88  23.35
+stage4  3.00  3.0  3.00  3.00  3.00  2.72  3.00  3.00  3.00  3.00  3.00  32.72
+
+Df_Cost:
+            sit    sop    ref      sev     evs     dgc     sls     rsum
+stage1    0.00   0.00   0.00   300.00  132.00  420.00  217.89  1069.89
+stage2  217.32   7.08  14.90   434.64  160.57  272.71  117.44  1224.66
+stage3    0.00  31.46  34.91   308.43   44.88  166.25   70.56   656.49
+stage4  119.70  31.89  22.98   119.70   12.50   44.86   52.44   404.07
+csum    337.02  70.43  72.79  1162.77  349.95  903.82  458.33  3355.11
+
+Time= 0.18694090843200684
+simulate by MCS method
+simulate by MCS method
+simulate by MCS method
+simulate by MCS method
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=0 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=1 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=2 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=3 m=0
+p=0 m=10000
+p=1 m=10000
+p=2 m=10000
+p=3 m=10000
+p=0 m=19999
+p=1 m=19999
+p=2 m=19999
+p=3 m=19999
+***time_propagation_single: 2579.4732551574707
+stage 0: maximum violate of volt_min [0.03675] at index [9]
+stage 0: maximum violate of volt_max [0.] at index [0]
+stage 0: maximum violate of line_max [0.0012] at index [76]
+
+stage 1: maximum violate of volt_min [0.04895] at index [80]
+stage 1: maximum violate of volt_max [0.] at index [0]
+stage 1: maximum violate of line_max [0.0125] at index [76]
+
+stage 2: maximum violate of volt_min [0.02] at index [80]
+stage 2: maximum violate of volt_max [0.] at index [0]
+stage 2: maximum violate of line_max [0.04355] at index [64]
+
+stage 3: maximum violate of volt_min [0.0242] at index [80]
+stage 3: maximum violate of volt_max [0.0293] at index [44]
+stage 3: maximum violate of line_max [0.04895] at index [58]
+
+time_totaliztion by mcs: 33849.9771156311s=9.402771421008639h
+time_optimiztion by mcs: 17975.060549736023s=4.993072374926673h
+time_propagation by mcs: 15860.956775188446s=4.405821326441235h
+Part 3: test different schedule strategies...
+strategy-ini: No strategy is adapted
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=0 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=1 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=2 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=3 m=0
+p=1 m=10000
+p=3 m=10000
+p=2 m=10000
+p=0 m=10000
+p=1 m=19999
+p=3 m=19999
+p=2 m=19999
+p=0 m=19999
+Df_Cost_appl_detail:
+         pal  trs  sit  sop  ref      sev     evs     dgc     sls  dga  lda  eva      bas     vas     rsum
+stage1  0.0  0.0  0.0  0.0  0.0   300.00  132.00  420.00  236.35  0.0  0.0  0.0    10.51   65.56  1164.42
+stage2  0.0  0.0  0.0  0.0  0.0   434.64  160.57  272.71  137.24  0.0  0.0  0.0   123.23  176.55  1304.94
+stage3  0.0  0.0  0.0  0.0  0.0   308.43   44.88  166.25   85.13  0.0  0.0  0.0   547.64  246.84  1399.17
+stage4  0.0  0.0  0.0  0.0  0.0   119.70   12.50   44.86   71.49  0.0  0.0  0.0   930.66  243.74  1422.95
+csum    0.0  0.0  0.0  0.0  0.0  1162.77  349.95  903.82  530.21  0.0  0.0  0.0  1612.04  732.69  5291.48
+
+Df_Cost_appl_simply:
+         exp  sop      evs     dgc     sls      bas     vas     rsum
+stage1  0.0  0.0   432.00  420.00  236.35    10.51   65.56  1164.42
+stage2  0.0  0.0   595.21  272.71  137.24   123.23  176.55  1304.94
+stage3  0.0  0.0   353.31  166.25   85.13   547.64  246.84  1399.17
+stage4  0.0  0.0   132.20   44.86   71.49   930.66  243.74  1422.95
+csum    0.0  0.0  1512.72  903.82  530.21  1612.04  732.69  5291.48
+
+stage 0: maximum violate of volt_min [0.03675] at index [9]
+stage 0: maximum violate of volt_max [0.] at index [0]
+stage 0: maximum violate of line_max [0.0012] at index [76]
+
+stage 1: maximum violate of volt_min [0.09515] at index [9]
+stage 1: maximum violate of volt_max [0.] at index [0]
+stage 1: maximum violate of line_max [0.0125] at index [76]
+
+stage 2: maximum violate of volt_min [0.2083] at index [80]
+stage 2: maximum violate of volt_max [0.] at index [0]
+stage 2: maximum violate of line_max [0.11165] at index [76]
+
+stage 3: maximum violate of volt_min [0.34195] at index [93]
+stage 3: maximum violate of volt_max [0.33745] at index [71]
+stage 3: maximum violate of line_max [0.33175] at index [76]
+
+strategy-pal: Paralle-branch strategy is adapted
+Kline:  [[], ['A', 'I'], ['A', 'I', 'K'], ['A', 'E', 'H', 'I', 'K']]
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=0 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=1 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=2 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=3 m=0
+p=2 m=10000
+p=3 m=10000
+p=0 m=10000
+p=1 m=10000
+p=2 m=19999
+p=3 m=19999
+p=0 m=19999
+p=1 m=19999
+Df_Cost_appl_detail:
+            pal     trs  sit  sop  ref      sev     evs     dgc     sls  dga  lda  eva     bas    vas     rsum
+stage1    0.00    0.00  0.0  0.0  0.0   300.00  132.00  420.00  236.35  0.0  0.0  0.0   10.51  65.56  1164.42
+stage2  413.98  196.21  0.0  0.0  0.0   434.64  160.57  272.71  112.69  0.0  0.0  0.0   58.28   6.26  1655.34
+stage3  168.04   53.30  0.0  0.0  0.0   308.43   44.88  166.25   60.09  0.0  0.0  0.0    3.24   0.00   804.23
+stage4  349.75   56.74  0.0  0.0  0.0   119.70   12.50   44.86   42.46  0.0  0.0  0.0  111.38   1.12   738.51
+csum    931.77  306.25  0.0  0.0  0.0  1162.77  349.95  903.82  451.59  0.0  0.0  0.0  183.41  72.94  4362.50
+
+Df_Cost_appl_simply:
+             exp  sop      evs     dgc     sls     bas    vas     rsum
+stage1     0.00  0.0   432.00  420.00  236.35   10.51  65.56  1164.42
+stage2   610.19  0.0   595.21  272.71  112.69   58.28   6.26  1655.34
+stage3   221.34  0.0   353.31  166.25   60.09    3.24   0.00   804.23
+stage4   406.49  0.0   132.20   44.86   42.46  111.38   1.12   738.51
+csum    1238.02  0.0  1512.72  903.82  451.59  183.41  72.94  4362.50
+
+stage 0: maximum violate of volt_min [0.03675] at index [9]
+stage 0: maximum violate of volt_max [0.] at index [0]
+stage 0: maximum violate of line_max [0.0012] at index [76]
+
+stage 1: maximum violate of volt_min [0.01995] at index [93]
+stage 1: maximum violate of volt_max [0.] at index [0]
+stage 1: maximum violate of line_max [0.0125] at index [76]
+
+stage 2: maximum violate of volt_min [0.] at index [0]
+stage 2: maximum violate of volt_max [0.] at index [0]
+stage 2: maximum violate of line_max [0.00055] at index [29]
+
+stage 3: maximum violate of volt_min [0.] at index [0]
+stage 3: maximum violate of volt_max [0.01995] at index [71]
+stage 3: maximum violate of line_max [0.1548] at index [58]
+
+strategy-sop: SOP strategy is adapted
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=0 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=1 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=2 m=0
+Operation model-Preparation: Define varaibles
+Operation model-Preparation: Confine varaibles
+Operation model-Preparation: Construct constraint matrices
+Operation model-Iteratiion: calculation
+p=3 m=0
+p=0 m=10000
+p=1 m=10000
+p=2 m=10000
+p=3 m=10000
+p=0 m=19999
+p=1 m=19999
+p=2 m=19999
+p=3 m=19999
+Df_Cost_appl_detail:
+         pal  trs     sit    sop    ref      sev     evs     dgc     sls  dga  lda  eva     bas     vas     rsum
+stage1  0.0  0.0    0.00   0.00   0.00   300.00  132.00  420.00  236.35  0.0  0.0  0.0   10.51   65.56  1164.42
+stage2  0.0  0.0  217.32   7.08  14.90   434.64  160.57  272.71  136.83  0.0  0.0  0.0  114.52  111.78  1470.35
+stage3  0.0  0.0    0.00  31.46  34.91   308.43   44.88  166.25   83.76  0.0  0.0  0.0  212.56   14.90   897.15
+stage4  0.0  0.0  119.70  31.89  22.98   119.70   12.50   44.86   58.09  0.0  0.0  0.0  117.94   10.08   537.74
+csum    0.0  0.0  337.02  70.43  72.79  1162.77  349.95  903.82  515.03  0.0  0.0  0.0  455.53  202.32  4069.66
+
+Df_Cost_appl_simply:
+         exp     sop      evs     dgc     sls     bas     vas     rsum
+stage1  0.0    0.00   432.00  420.00  236.35   10.51   65.56  1164.42
+stage2  0.0  239.30   595.21  272.71  136.83  114.52  111.78  1470.35
+stage3  0.0   66.37   353.31  166.25   83.76  212.56   14.90   897.15
+stage4  0.0  174.57   132.20   44.86   58.09  117.94   10.08   537.74
+csum    0.0  480.24  1512.72  903.82  515.03  455.53  202.32  4069.66
+
+stage 0: maximum violate of volt_min [0.03675] at index [9]
+stage 0: maximum violate of volt_max [0.] at index [0]
+stage 0: maximum violate of line_max [0.0012] at index [76]
+
+stage 1: maximum violate of volt_min [0.04895] at index [80]
+stage 1: maximum violate of volt_max [0.] at index [0]
+stage 1: maximum violate of line_max [0.0125] at index [76]
+
+stage 2: maximum violate of volt_min [0.02] at index [80]
+stage 2: maximum violate of volt_max [0.] at index [0]
+stage 2: maximum violate of line_max [0.04355] at index [64]
+
+stage 3: maximum violate of volt_min [0.0242] at index [80]
+stage 3: maximum violate of volt_max [0.0293] at index [44]
+stage 3: maximum violate of line_max [0.04895] at index [58]
+
+
+Process finished with exit code 0
